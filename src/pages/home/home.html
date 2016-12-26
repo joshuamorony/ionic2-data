@@ -1,0 +1,31 @@
+<ion-header>
+
+	<ion-navbar color="danger">
+
+		<ion-buttons start>
+			<button ion-button icon-only (click)="resetData()"><ion-icon name="refresh"></ion-icon></button>    
+		</ion-buttons>
+
+		<ion-buttons end>
+			<button ion-button icon-only (click)="filterData()"><ion-icon name="funnel"></ion-icon></button>
+			<button ion-button icon-only (click)="mapData()"><ion-icon name="build"></ion-icon></button>  
+			<button ion-button icon-only (click)="reduceData()"><ion-icon name="calculator"></ion-icon></button>  
+		</ion-buttons>
+
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+	<ion-list>
+		<ion-item *ngFor="let youtuber of modifiedData">
+		    <ion-avatar item-left>
+		      <img [src]="youtuber.avatar">
+		    </ion-avatar>
+		    <h2>{{youtuber.name}}</h2>
+		    <p>Subscribers: {{youtuber.subscribers}}</p>
+		</ion-item>
+	</ion-list>
+
+</ion-content>
